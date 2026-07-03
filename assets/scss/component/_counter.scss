@@ -1,0 +1,122 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.16 Counter
+/*----------------------------------------*/
+
+
+
+// counter style home 2 
+
+.vkl-counter-boxmain-flex{
+    display: flex;
+    flex-wrap: wrap;
+    &-2{
+        justify-content: space-between;
+        @media #{$lg,$md,$xs}{
+            justify-content: inherit;
+        }
+    }
+}
+
+.vkl-counter{
+    position: relative;
+    z-index: 1;
+    margin-right: 50px;
+    padding-right: 50px;
+    @media #{$md}{
+        margin-right: 25px;
+        padding-right: 25px;
+    }
+    &:last-child{
+        margin-right: 0;
+        padding-right: 0;
+        &::after{
+            background: transparent;
+        }
+    }
+    &-title{
+        font-family: var(--vkl-family-font1) !important;
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height52);
+        font-weight: var(--vkl-weight-regular);
+    }
+    &-desc{
+        padding-top: 18px;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        color: var(--vkl-text-text-3);
+    }
+    & .symbol{
+        font-family: var(--vkl-family-font1) !important;
+        color: var(--vkl-text-text-black);
+        font-size: 44px;
+        line-height: 1;
+        position: relative;
+        top: 8px;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 50%;
+        height: 70px;
+        background: #C5CEC7;
+        width: 1px;
+        transform: translateY(-50%);
+        @media #{$xs}{
+            background: transparent;
+        }
+    }
+    &-2{
+        margin-right: 45px;
+        padding-right: 45px;
+    }
+    &-3{
+        margin-right: 74px;
+        padding-right: 74px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 30px;
+            padding-right: 30px;
+        }
+    }
+    &-white{
+        & .vkl-counter-title{
+            color: var(--vkl-text-text-white);
+        }
+        & .symbol{
+            color: var(--vkl-text-text-white);
+        } 
+        & .vkl-counter-desc{
+            color: rgb(255, 255, 255, 0.9);
+        }  
+    }
+}
+
+// counter style 3 
+
+.vkl-counter-area-3{
+    & .vkl-counter{
+        margin-bottom: 50px;
+        margin-right: 0;
+        padding-right: 0;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:after{
+            background: transparent;
+        }
+    }
+}
+
+.vkl-counter-area-3 {
+    @media #{$lg}{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    @media #{$md}{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

@@ -1,0 +1,29 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.17 Pagination
+/*----------------------------------------*/
+
+.theme-pagination{
+    & ul{
+        & li{
+            display: inline-block;
+            & a{
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+                display: inline-block;
+                line-height: 50px;
+                border-radius: 8px;
+                background: var(--vkl-bg-bg-1);
+                transition: .3s;
+                margin: 0 6px;
+                color: var(--vkl-text-text-black);
+                &:hover{
+                    background: var(--vkl-text-text-1);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}

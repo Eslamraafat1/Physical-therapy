@@ -1,0 +1,65 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 Main menu css
+/*----------------------------------------*/
+
+.vl-offcanvas-menu ul {
+    list-style: none;
+    & li{
+        position: relative;
+        
+        & a{
+            padding: 8px 0;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            & span.menu-dwn-arrow{
+                display: none; 
+            }
+        }
+        & > a{
+            border-bottom: 1px solid rgba(1, 15, 28, 0.1);
+        }
+        &.active{
+            & > a{
+                color: var(--vkl-text-text-2);
+            }
+            & > .vl-menu-close{
+                border-bottom:var(--vl-theme-color);
+                color: var(--vkl-text-text-white);
+                background: var(--vkl-text-text-2);
+                & i{
+                    transform: rotate(90deg);
+                    // @include transform(rotate(90deg));
+                }
+            }
+        }
+
+        & .sub-menu{
+            display: none;
+            padding-left: 20px;
+        }
+    }
+}
+
+// .vl-offcanvas-menu ul li .sub-menu{
+//     display: none;
+// }
+
+.vl-menu-close{
+    position: absolute;
+    right: 0;
+    top: 7px;
+    border: 1px solid rgba(1, 15, 28, 0.12);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 4px;
+    & i{
+        transition: .3s;
+        // @include transition(.3s);
+    }
+}

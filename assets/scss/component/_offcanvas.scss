@@ -1,0 +1,140 @@
+@use '../utils' as *;
+
+.vl-header-action-item {
+    float: right;
+    border: 1px solid var(--vkl-text-text-white);
+    padding: 7px 11px;
+    border-radius: 8px;
+    color: var(--vkl-text-text-white);
+    &-2{
+        border: 1px solid var(--vkl-text-text-black);
+        color: var(--vkl-text-text-black);
+    }
+}
+
+.vl-offcanvas {
+    position: fixed;
+    background: #fff;
+    width: 450px;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    padding: 50px 40px;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: .3s;
+    // @include transform(translateX(100%));
+    // @include transition(.3s);
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+    @media only screen and (max-width:450px){
+        width: 100%;
+    }
+    &-open{
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        //@include transform(translateX(0));
+    }
+    &-close-toggle{
+        font-size: 30px;
+        color: var(--vl-heading-color);
+    }
+    &-header{
+        @media #{$lg,$md,$xs}{
+            margin-bottom: 40px;
+        }
+
+    }
+   
+    &-title{
+        font-size: 35px;
+    }
+    
+    &-info {
+        & span {
+            display: block;
+            color: #222;
+            margin-bottom: 5px;
+        }
+    }
+    &-sm-title{
+        font-size: 25px;
+    }
+    &-social{
+        &  a{
+            display: inline-block;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 40px;
+            color: var(--vl-heading-color);
+            border: 1px solid rgba(2,11,24,0.1);
+            font-size: 14px;
+            transition: .3s;
+            &:hover{
+                background: var(--vkl-text-text-2);
+                transition: .3s;
+                color: var(--vkl-text-text-white);
+            }
+        }
+    }
+
+    &-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.45 easc-in-out;
+        background: rgba(24, 24, 24, 0.4);
+        &-open{
+            opacity: .7;
+            visibility: visible;
+        }
+    }
+   
+
+}
+
+.vl-offcanvas-info a{
+    display: block;
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    span {
+        border: 1px solid var(--vkl-border-border-3);
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50px;
+        margin-right: 4px;
+        transition: .3s;
+        & img{
+            margin-top: -4px;
+            transition: .3s;
+        }
+    }
+    &:hover{
+        color: var(--vkl-text-text-2);
+        & span{
+            background: var(--vkl-text-text-2);
+            transition: .3s;
+            & img{
+                filter: brightness(0) invert(1);
+                transition: .3s;
+            }
+        }
+    }
+}
+

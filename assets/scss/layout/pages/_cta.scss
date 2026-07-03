@@ -1,0 +1,130 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.8 CTA css
+/*----------------------------------------*/
+
+.vkl-cta-area{
+    position: relative;
+    z-index: 1;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(92deg, rgba(19, 44, 18, 0.90) -7.66%, rgba(19, 44, 18, 0.00) 100.88%);
+    }
+}
+
+.vkl-cta-content{
+    position: relative;
+    z-index: 1;
+    margin-right:70px;
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+    & .desc{
+        color: rgba(255, 255, 255, 0.90);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+    }
+    &-3{
+        background: var(--vkl-text-text-black);
+        padding: 50px;
+        margin-right: 104px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+}
+
+.vkl-cta-from-area{
+    position: relative;
+    z-index: 1;
+    width: 495px;
+    @media #{$md,$xs}{
+        width: 100%;
+    }
+    & input{
+        background: var(--vkl-text-text-white);
+        border-radius: 8px;
+        color: var(--vkl-text-text-black);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        height: 68px;
+        padding-right: 135px;
+        &::placeholder{
+            color: var(--vkl-text-text-black);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & .vkl-cta-form-btn{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        &-2{
+            right: 5px;
+            top: 8px;
+        }
+    }
+    &-2{
+        width: 370px;
+        float: right;
+        @media #{$lg,$md,$xs}{
+            float: inherit;
+        }
+        @media #{$xs}{
+            width: 100%;
+        }
+        & input{
+            border-radius: 88px;
+            border: 1px solid transparent;
+        }
+    }
+    &-3{
+        & input{
+            border-radius: 88px;
+        }
+    }
+    &-6{
+        & input{
+            border-radius: 8px;
+        }
+    }
+}
+
+.border-top-area {
+    border-top: 1px solid var(--vkl-border-border-4);
+    margin-top: 18px;
+    margin-bottom: 48px;
+    &-4{
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+    }
+}
+
+
+// cta button style 4 
+
+.vkl-cta-btn-wrap4{
+    text-align: end;
+    @media #{$lg,$md,$xs}{
+        text-align: start;
+    }
+}
+
+// cta style 6 
+
+.vkl-cta-bg-6{
+    background: var(--vkl-text-text-2);
+    padding-top: 48px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 18px;
+}

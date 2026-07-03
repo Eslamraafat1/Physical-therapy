@@ -1,0 +1,85 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+
+.vkl-section-title{
+    & .sub-title{
+        display: inline-block;
+        padding: 6px 8px;
+        line-height: var(--vkl-specing-height20);
+        & span{
+            & img{
+                margin-top: -4px;
+                margin-right: 4px;
+            }
+        }
+    }
+    & .title{
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height52);
+        @media #{$md}{
+            font-size: var(--vkl-font-size-font-s32);
+            line-height: var(--vkl-specing-height40);
+        }
+        @media #{$xs}{
+            font-size: var(--vkl-font-size-font-s30);
+            line-height: var(--vkl-specing-height40);
+        }
+    }
+    &-white{
+        & .sub-title{
+            background: rgba(255, 253, 245, 0.10);
+            color: var(--vkl-text-text-white);
+        }
+        & .title{
+            color: var(--vkl-text-text-white);
+        }
+    }
+}
+
+// hero section title 
+
+.vkl-hero-content{
+    & .sub-title{
+        color: var(--vkl-text-text-white);
+        background: rgba(170, 204, 37, 0.10);       
+    }
+    & .title{
+        color: var(--vkl-text-text-white);
+        font-size: var(--vkl-font-size-font-s70);
+        line-height: 78px;
+        @media #{$md}{
+            font-size: var(--vkl-font-size-font-s50);
+            line-height: var(--vkl-specing-height60);
+        }
+        @media #{$xs}{
+            font-size: var(--vkl-font-size-font-s40);
+            line-height: var(--vkl-specing-height50);
+        }
+        &-2{
+            line-height: 70px;
+        }
+    }
+    &-2{
+        & .sub-title{
+            background: var(--vkl-bg-bg-2);
+            color: var(--vkl-text-text-black);
+        }
+        & .title{
+            color: var(--vkl-text-text-black);
+        }
+        & .desc{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height26);
+        }
+    }
+    &-3{
+        margin-right: 105px;
+        @media #{$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+    
+}

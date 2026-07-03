@@ -1,0 +1,119 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.9 Pricing css
+/*----------------------------------------*/
+
+.vkl-pricing-item{
+    border-radius: 8px;
+    border: 1px solid rgba(19, 44, 18, 0.10); 
+    padding: 32px; 
+    transition: .3s;
+    @media #{$md,$xs}{
+        padding: 20px;
+    }
+    &-title{
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+        color: var(--vkl-text-text-black);
+    }
+    &-desc{
+        color: var(--vkl-text-text-3);
+    } 
+    &-price{
+        color: var(--vkl-text-text-black);
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height52);
+        & .vkl-pricing-month{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-family: var(--vkl-family-font2);
+        }
+    }
+    &-pricecehck{
+        & li{
+            margin-bottom: 16px;
+            display: flex;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            & span{
+                & img{
+                    margin-top: -4px;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+    &:hover{
+        border: 1px solid var(--vkl-bg-bg-1);
+        background: var(--vkl-bg-bg-1);
+        transition: .3s;
+    }
+    &.active{
+        border:1px solid var(--vkl-text-text-2);
+        background:var(--vkl-bg-bg-1);
+    }
+    &-inner{
+        background: var(--vkl-bg-bg-1);
+        border: 1px solid var(--vkl-text-text-2);
+        &:hover{
+            border: 1px solid var(--vkl-text-text-2);
+        }
+    }
+}
+
+.vkl-pricing-btn {
+    padding-top: 16px;
+    border-top: 1px solid rgba(19, 44, 18, 0.10);
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(19, 44, 18, 0.10);
+    margin-bottom: 24px;
+}
+
+
+// pricing table 2 
+
+.vkl-pricing-table{
+    width: 100%;
+    border-radius: 8px;
+    & tr th{
+        border: 1px solid #DCE0DE;
+        font-size: var(--vkl-font-size-font-s24);
+        list-style: var(--vkl-specing-height24);
+        color: var(--vkl-text-text-black);
+        padding: 24px 28px;
+        background: var(--vkl-bg-bg-1);
+    }
+    & tr td{
+        border: 1px solid #DCE0DE;
+        font-size: var(--vkl-font-size-font-s18);
+        list-style: var(--vkl-specing-height26);
+        color: var(--vkl-text-text-3);
+        padding: 20px 28px;
+        font-weight: 400;
+        &.list{
+            display: flex;
+        }
+        &.plan{
+            background: var(--vkl-bg-bg-1);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height28);
+            color: var(--vkl-text-text-black);
+            font-family: var(--vkl-family-font1);
+            font-weight: 400;
+        }
+        & img{
+            margin-top: -4px;
+            margin-right: 8px;
+        }
+    }
+}
+
+
+.vkl-pricing-heading2{
+    font-size: var(--vkl-font-size-font-s44);
+    line-height: var(--vkl-specing-height52);
+    color: var(--vkl-text-text-black);
+    transition: .3s;
+}

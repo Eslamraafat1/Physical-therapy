@@ -1,0 +1,328 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  7.5 Fact css
+/*----------------------------------------*/
+
+.vkl-case-item-2{
+    position: relative;
+    z-index: 1;
+    &-desc{
+        color: var(--vkl-text-text-black);
+        padding: 8px 10px;
+        background: var(--vkl-bg-bg-1);
+        transition: .3s;
+        display: inline-block;
+        font-size: var(--vkl-font-size-font-s16);
+        line-height: var(--vkl-specing-height16);
+        font-weight: var(--vkl-weight-medium);
+    }
+    &-title{
+        font-size: var(--vkl-font-size-font-s20);
+        line-height: var(--vkl-specing-height20);
+        transition: .3s;
+        @media #{$md,$xs}{
+            line-height: var(--vkl-specing-height30);
+        }
+        &:hover{
+            color: var(--vkl-text-text-2);
+            transition: .3s;
+        }
+    }
+    & .overlay-bg {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 0%;
+        width: 100%;
+        background: var(--vkl-text-text-black);
+        opacity: .5;
+        transition: all 500ms ease;
+    }
+    & .vkl-up-arrow{
+        background: var(--vkl-text-text-1);
+        height: 80px;
+        width: 80px;
+        display: grid;
+        place-content: center;
+        border-radius: 50px;
+        position: absolute;
+        top: 10%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: all .3s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover{
+        & .vkl-case-item-2{
+            &-desc{
+                background: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+        & .overlay-bg{
+            height: 100%;
+        }
+        & .vkl-up-arrow{
+            top: 50%;
+            opacity: 1;
+            visibility: visible;
+            transition: .5s;
+        }
+    }
+}
+
+
+// card style 7 
+
+.vkl-card{
+    padding: 50px;
+    background: var(--vkl-bg-bg-2);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: .3s;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.04);
+    @media #{$lg,$md,$xs}{
+        padding: 20px;
+    }
+    &-title{
+        font-size: var(--vkl-font-size-font-s28);
+        line-height: var(--vkl-specing-height28);
+        font-weight: var(--vkl-weight-regular);
+        color: var(--vkl-text-text-black);
+        transition: .3s;
+    }
+    &-desc{
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height26);
+        font-weight: var(--vkl-weight-regular);
+        padding-top: 16px;
+    }
+    &-icon{
+        & .icon{
+            display: flex;
+            align-items: center;
+            & span{
+                height: 60px;
+                width: 60px;
+                background: var(--vkl-bg-bg-1);
+                display: inline-block;
+                line-height: 60px;
+                border-radius: 50px;
+                text-align: center;
+                margin-right: 10px;
+                & img{
+                    transition: .3s;
+                }
+            }
+        }
+        & .number{
+            & a{
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-font-size-font-s20);
+                color: var(--vkl-text-text-black);
+                font-family: var(--vkl-family-font1);
+                display: block;
+                transition: .3s;
+                &:hover{
+                    color: var(--vkl-text-text-2);
+                    transition: .3s;
+                }
+            }
+        }
+        & .title{
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+            color: var(--vkl-text-text-black);
+            font-weight: var(--vkl-weight-regular);
+            transition: .3s;
+        }
+    }
+    &-btn{
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        color: var(--vkl-text-text-black);
+        transition: .3s;
+        display: inline-block;
+        font-weight: var(--vkl-weight-semibold);
+        position: relative;
+        z-index: 1;
+        margin-top: 32px;
+        &::after{
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0%;
+            background: var(--vkl-text-text-2);
+            transition: .3s;
+        }
+        & span{
+            display: inline-block;
+            transition: .3s;
+            transform: rotate(-45deg);
+        }
+        &:hover{
+            color: var(--vkl-text-text-2);
+            transition: .3s;
+            &::after{
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+            & span{
+                transform: rotate(0);
+                transition: .3s;
+            }
+        }
+    }
+    &:hover{
+        border: 1px solid var(--vkl-text-text-2);
+        transition: .3s;
+        .vkl-card{
+            &-icon{
+                & span{
+                    background: var(--vkl-text-text-2);
+                    transition: .3s;
+                    & img{
+                        filter: brightness(0) invert(1);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.vkl-card-date-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #DCE2DD;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    & .title{
+        font-size: var(--vkl-font-size-font-s20);
+        line-height: var(--vkl-specing-height20);
+        color: var(--vkl-text-text-black);
+    }
+    & .time{
+        font-size: var(--vkl-font-size-font-s16);
+        line-height: var(--vkl-specing-height16);
+        font-weight: var(--vkl-weight-regular);
+        color: var(--vkl-text-text-black);
+
+    }
+}
+
+.vkl-card-wrap{
+    margin-top: -220px;
+    position: relative;
+    z-index: 1;
+}
+
+// case style 8 
+
+.vkl-case-wrap-8{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    &-thumb{
+        height: 320px;
+        transition: .3s;
+        overflow: hidden;
+        border-radius: 8px;
+        position: relative;
+        & img{
+            transition: .3s;
+        }
+    }
+    &-content{
+        position: absolute;
+        top: 55%;
+        padding: 32px 24px;
+        transition: .3s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        & .tag8{
+            background: var(--vkl-text-text-1);
+            color: var(--vkl-text-text-black);
+            display: inline-block;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: var(--vkl-font-size-font-s16);
+            line-height: var(--vkl-specing-height16);
+            margin-bottom: 134px;
+        }
+        & .title{
+            color: var(--vkl-text-text-white);
+            transition: .3s;
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height28);
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+        & .larnmore{
+            color: var(--vkl-text-text-white);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-semibold);
+            transition: .3s;
+            display: inline-block;
+            & span{
+                display: inline-block;
+                transform: .3s;
+                transform: rotate(-45deg);
+            }
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+                & span{
+                    transform: rotate(0);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 0;
+        width: 100%;
+        opacity: 0.7;
+        background: #80c23e;
+        transition: .3s;
+    }
+    &:hover{
+        & .vkl-case-wrap-8-content{
+            top: 0;
+            transition: .3s;
+            opacity: 1;
+            visibility:visible;
+        }
+        &::after{
+            height: 100%;
+            transition: .3s;
+        }
+    }
+}
+
+.vkl-case-wrapper-8 {
+    padding-top: 182px;
+    @media #{$lg,$md,$xs}{
+        padding-top: 0;
+    }
+}

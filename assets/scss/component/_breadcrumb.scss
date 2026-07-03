@@ -1,0 +1,14 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.11 Breadcrumb
+/*----------------------------------------*/
+
+.vkl-breacrumb-menu ul li {
+    display: inline-block;
+    color: var(--vkl-text-text-white);
+    & .active{
+        font-weight: 700;
+    }
+}

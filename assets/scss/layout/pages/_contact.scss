@@ -1,0 +1,254 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.10 Contact css
+/*----------------------------------------*/
+
+.vkl-contatc-wrap1 {
+    margin-top: -80px;
+}
+.vkl-contact1{
+    position: relative;
+}
+
+.vkl-contact-bg-wrap{
+    margin-left: 85px;
+    margin-right: 85px;
+    @media #{$xxl}{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @media #{$lg,$md,$xs}{
+       margin-left: 0;
+       margin-right: 0;
+    }
+}
+
+.vkl-contact-wrap {
+    padding-right: 75px;
+    @media #{$lg,$md,$xs}{
+        padding-right: 0;
+    }
+}
+
+
+.vkl-contact-wrap .vkl-section-title {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #DCE2DD;
+}
+
+.vkl-contact-form-wrap{
+    padding: 32px;
+    & .vkl-contact-title{
+        line-height: var(--vkl-specing-height24);
+    }
+    & .desc{
+        color: var(--vkl-text-text-3);
+        line-height: var(--vkl-specing-height26);
+        font-weight: var(--vkl-weight-medium);
+        padding-top: 16px;
+        padding-bottom: 32px;
+    }
+}
+
+
+.vl-form-wrap{
+    & input, & textarea{
+        border: 1px solid var(--vkl-border-border-4);
+        border-radius: 8px;
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        background: transparent;
+        height: 54px;
+        width: 100%;
+        padding: 10px;
+        &::placeholder{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+        &:focus{
+        border: 1px solid var(--vkl-border-border-4);
+    }
+    }
+    & textarea{
+        height: 150px;
+    }
+    &:focus{
+        border: 1px solid transparent;
+    }
+    &-2{
+        & input, & textarea{
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.10);
+            color: rgba(255, 255, 255, 0.90);
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.90);
+            }
+            &:focus{
+                border: 1px solid transparent;
+            }
+        }
+        input[type="date"]{
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.10) !important;
+            color: rgba(255, 255, 255, 0.90);
+            &:focus{
+                background: rgba(255, 255, 255, 0.10) !important;
+            }
+        }
+    }
+    &-inner{
+        & input, & textarea{
+        border: 1px solid #CFD8D2;
+        border-radius: 8px;
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        background: transparent;
+        height: 54px;
+        width: 100%;
+        padding: 10px;
+        &::placeholder{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+        &:focus{
+        border: 1px solid #CFD8D2;
+    }
+    }
+       &:focus{
+        border: 1px solid #CFD8D2;
+    } 
+    }
+    &-appointment{
+        & label{
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            color: var(--vkl-text-text-3);
+            padding-bottom: 12px;
+        }
+    }
+}
+
+.form-clt{
+    .nice-select.single-select{
+        background: transparent;
+        border: 1px solid var(--vkl-border-border-4);
+        border-radius: 8px;
+        height: 54px;
+        line-height: 54px;
+        font-size: 18px;
+        &-2{
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.10);
+            color: rgba(255, 255, 255, 0.90);
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.90);
+            }
+            &:focus{
+                border: 1px solid transparent;
+            }
+            & .list{
+                background: var(--vkl-bg-bg-1);
+                color: var(--vkl-text-text-black);
+            }
+            .nice-select:after {
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                content: '';
+                height: 8px;
+                width: 8px;
+            }
+        }
+    }
+    
+    ul.list {
+        width: 100%;
+    }
+    .nice-select:after {
+        border-bottom: 2px solid var(--vkl-text-text-3);
+        border-right: 2px solid var(--vkl-text-text-3);
+        content: '';
+        height: 8px;
+        width: 8px;
+    }
+    .nice-select.single-select-2:after {
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        content: '';
+        height: 8px;
+        width: 8px;
+    }
+}
+
+input[type="date"]:focus-visible,
+input[type="date"]:focus {
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+// maps 
+.vkl-maps{
+    width: 100%;
+    height:600px;
+    margin-bottom: -7px;
+}
+
+
+// appointment page style
+
+
+.vkl-appointment-wrapper{
+    border: 1px solid #DCE2DD;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 60px 50px;
+    @media #{$lg,$md,$xs}{
+        border-radius: 8px;
+    }
+    @media #{$xs}{
+        padding: 30px;
+    }
+}
+
+.vkl-appointment-bg{
+    & img{
+        height: 628px;
+        object-fit: cover;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        @media #{$lg,$md,$xs}{
+            border-radius: 8px;
+            height: 100%;
+        }
+    }
+}
+
+.vkl-appoint-text{
+    & .title{
+        color: var(--vkl-text-text-black);
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height52);
+        transition: .3s;
+    }
+    & .para{
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        color: var(--vkl-text-text-3);
+        transition: .3s;
+        padding-top: 16px;
+        @media #{$lg,$md,$xs}{
+            line-height: var(--vkl-specing-height26);
+        }
+    }
+}
