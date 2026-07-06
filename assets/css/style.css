@@ -1033,7 +1033,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     font-weight: var(--vkl-weight-semibold);
     display: inline-block;
     padding: 10px !important;
-    padding-left: 24px !important;
+    padding-left: 23px !important;
     border-radius: 88px;
     transition: 0.3s;
 }
