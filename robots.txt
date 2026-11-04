@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://physical-therapy-orpin.vercel.app/sitemap.xml

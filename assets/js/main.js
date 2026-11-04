@@ -486,6 +486,13 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener('mouseenter', function () {
           activateComponent(this);
         });
+        // keyboard and touch support
+        item.addEventListener('focus', function () {
+          activateComponent(this);
+        });
+        item.addEventListener('click', function () {
+          activateComponent(this);
+        });
 
       });
 

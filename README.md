@@ -47,6 +47,8 @@ A responsive website for Dr. Ahmed Abdrabou's physical therapy clinic: services,
 - [Pages](#pages)
 - [Project structure](#project-structure)
 - [Getting started](#getting-started)
+- [Testing](#testing)
+- [Known limitations](#known-limitations)
 - [Deployment](#deployment)
 - [Author](#author)
 
@@ -54,24 +56,35 @@ A responsive website for Dr. Ahmed Abdrabou's physical therapy clinic: services,
 
 This is a client website for a physical therapy clinic run by Dr. Ahmed Abdrabou. It is built on a chiropractic / clinic HTML template that I branded for the clinic (logo and copy) and extended with a custom **interactive body-pain map** section.
 
-The site is front-end only: the forms have no back end yet, and the phone numbers, emails and Google Map embed are still the template's placeholder values, to be replaced with the clinic's real details.
+The site is front-end only. The template's placeholder phone numbers, emails, addresses and New York map embed have been removed; the contact blocks say **"Contact details coming soon"** until the clinic's real details are added.
 
 ## Features
 
 ### Interactive body map (custom section)
 
 - Ten pain areas in two lists: neck, shoulder, knee, hand, foot, hip, elbow, tricep, ankle and back.
-- Hovering an item moves a pulsing marker to that spot on the body figure, using `data-x` / `data-y` coordinates on each list item (`assets/js/main.js`).
+- Hovering, clicking or keyboard-focusing an item moves a pulsing marker to that spot on the body figure, using `data-x` / `data-y` coordinates on each list item (`assets/js/main.js`).
+- The body figure is a local SVG (`assets/img/body-map.svg`); it replaced an image that was hotlinked from another template's demo site.
 - The first item is activated on load so the section is never empty.
 
 ### Clinic site
 
-- Hero with a parallax background (Parallaxie), a "Book an Appointment" call to action and a video pop-up (Magnific Popup).
+- Hero with a parallax background (Parallaxie) and a "Book an Appointment" call to action.
 - Swiper carousels for services, team members and testimonials (`assets/js/slider.js`).
 - Animated number counters (Odometer) and scroll animations (AOS).
 - Preloader, custom mouse cursor, sticky header, off-canvas mobile menu and a back-to-top progress button.
 - FAQ accordion, case studies (grid and sidebar layouts), team member details, blog list and single post, service details and a custom 404 page.
 - Styled `<select>` inputs with Nice Select in the contact and service-page forms.
+
+### Forms
+
+- Every form is validated in the browser (`assets/js/forms.js`): required fields, email format and phone format, with inline error styling and an `aria-live` status message.
+- Because there is no back end and no confirmed clinic contact yet, a valid form is **not sent**; the visitor is told so. Setting `CLINIC_CONTACT.whatsapp` or `CLINIC_CONTACT.email` at the top of `forms.js` makes valid forms open WhatsApp or the email app with the message pre-filled.
+
+### SEO
+
+- Unique `<title>` and meta description on every page, canonical URLs, Open Graph and Twitter card tags, `lang="en"`.
+- `sitemap.xml` and `robots.txt` at the site root; the 404 page is `noindex`.
 
 ## Tech stack
 
@@ -114,9 +127,11 @@ The site is front-end only: the forms have no back end yet, and the phone number
 │   ├── scss/                  # component/, layout/, theme/, utils/ partials
 │   ├── js/
 │   │   ├── main.js            # site scripts and the body-map interaction
+│   │   ├── forms.js           # client-side form validation
 │   │   ├── slider.js          # Swiper carousels
 │   │   └── plugins/           # jQuery, Bootstrap, Swiper, AOS, Odometer, Parallaxie …
-│   └── img/                   # logo, photos and icons
+│   └── img/                   # logo, photos, icons, body-map.svg
+├── sitemap.xml, robots.txt
 └── docs/screenshots/          # README screenshots
 ```
 
@@ -129,6 +144,16 @@ git clone https://github.com/Eslamraafat1/Physical-therapy.git
 cd Physical-therapy
 npx serve .          # or open index.html in a browser
 ```
+
+## Testing
+
+There is no automated test suite in the repository. Each change is checked with a Playwright script against a local `python3 -m http.server`: all 13 pages load with no 404 requests and no console errors, every internal `.html` link resolves, the body map moves its marker on click and focus, and form validation blocks empty and badly formatted input.
+
+## Known limitations
+
+- **Contact details:** phone, email, address, map and social links still need the clinic's real details. Until then they read "Contact details coming soon" and the forms don't send anything.
+- **Template sample content:** the case studies, testimonials, team members, blog posts, working hours and counters (e.g. "10+ Years of Excellence") come from the template and are not the clinic's own data yet.
+- The blog, team and case-study pages are single sample pages; pagination and social share icons are placeholders.
 
 ## Deployment
 

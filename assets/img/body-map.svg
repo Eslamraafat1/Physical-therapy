@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 890" width="560" height="890" role="img" aria-label="Front view of a human body">
+<path d="M182 192 L128 330 L80 432" fill="none" stroke="#7c84c8" stroke-width="62" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M378 192 L432 330 L480 432" fill="none" stroke="#7c84c8" stroke-width="62" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M234 468 L226 640 L234 820" fill="none" stroke="#7c84c8" stroke-width="76" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M326 468 L334 640 L326 820" fill="none" stroke="#7c84c8" stroke-width="76" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280 112 L280 168" fill="none" stroke="#7c84c8" stroke-width="66" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M178 168 Q280 142 382 168 Q404 180 398 216 L372 330 Q352 400 364 472 Q280 506 196 472 Q208 400 188 330 L162 216 Q156 180 178 168 Z" fill="#7c84c8" stroke="#7c84c8" stroke-width="8" stroke-linejoin="round"/>
+<ellipse cx="280" cy="72" rx="46" ry="58" fill="#7c84c8" stroke="#7c84c8" stroke-width="8"/>
+<ellipse cx="64" cy="458" rx="27" ry="37" fill="#7c84c8" stroke="#7c84c8" stroke-width="8" transform="rotate(25 64 458)"/>
+<ellipse cx="496" cy="458" rx="27" ry="37" fill="#7c84c8" stroke="#7c84c8" stroke-width="8" transform="rotate(-25 496 458)"/>
+<ellipse cx="224" cy="860" rx="40" ry="23" fill="#7c84c8" stroke="#7c84c8" stroke-width="8"/>
+<ellipse cx="336" cy="860" rx="40" ry="23" fill="#7c84c8" stroke="#7c84c8" stroke-width="8"/>
+<path d="M182 192 L128 330 L80 432" fill="none" stroke="#e4e7f7" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M378 192 L432 330 L480 432" fill="none" stroke="#e4e7f7" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M234 468 L226 640 L234 820" fill="none" stroke="#e4e7f7" stroke-width="68" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M326 468 L334 640 L326 820" fill="none" stroke="#e4e7f7" stroke-width="68" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280 112 L280 168" fill="none" stroke="#e4e7f7" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M178 168 Q280 142 382 168 Q404 180 398 216 L372 330 Q352 400 364 472 Q280 506 196 472 Q208 400 188 330 L162 216 Q156 180 178 168 Z" fill="#e4e7f7" stroke="#e4e7f7"  stroke-linejoin="round"/>
+<ellipse cx="280" cy="72" rx="46" ry="58" fill="#e4e7f7" stroke="#e4e7f7" />
+<ellipse cx="64" cy="458" rx="27" ry="37" fill="#e4e7f7" stroke="#e4e7f7"  transform="rotate(25 64 458)"/>
+<ellipse cx="496" cy="458" rx="27" ry="37" fill="#e4e7f7" stroke="#e4e7f7"  transform="rotate(-25 496 458)"/>
+<ellipse cx="224" cy="860" rx="40" ry="23" fill="#e4e7f7" stroke="#e4e7f7" />
+<ellipse cx="336" cy="860" rx="40" ry="23" fill="#e4e7f7" stroke="#e4e7f7" />
+<path d="M280 190 L280 470" fill="none" stroke="#7c84c8" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M200 200 Q240 232 280 222 Q320 232 360 200" fill="none" stroke="#7c84c8" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M238 300 Q280 312 322 300" fill="none" stroke="#7c84c8" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M242 360 Q280 370 318 360" fill="none" stroke="#7c84c8" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M230 560 Q232 610 226 640" fill="none" stroke="#7c84c8" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+<path d="M330 560 Q328 610 334 640" fill="none" stroke="#7c84c8" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+</svg>

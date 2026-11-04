@@ -14870,3 +14870,22 @@ only screen and (min-width: 768px) and (max-width: 991px),
         justify-content: flex-start;
       }
     }
+
+/* form validation feedback (assets/js/forms.js) */
+form .is-invalid {
+  border-color: #d93025 !important;
+  outline: 1px solid #d93025;
+}
+form .form-status,
+form .form-note {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+form .form-status.is-error {
+  color: #d93025;
+}
+form .form-note {
+  opacity: 0.8;
+}
